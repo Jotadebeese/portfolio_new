@@ -1,8 +1,8 @@
 import '/styles/globals.css'
-import { Inter } from 'next/font/google'
+import { PT_Serif } from 'next/font/google'
 import NavMenu from '@/components/NavMenu'
 
-const inter = Inter({ subsets: ['latin'] })
+const playfair = PT_Serif({ subsets: ['latin'], weight:['400'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={playfair.className}>
         <NavMenu />
         {children}
       </body>
