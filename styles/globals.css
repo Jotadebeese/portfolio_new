@@ -1,5 +1,5 @@
 :root {
-    --color-gray: rgb(253, 253, 253);
+    --color-gray: rgb(255, 255, 255);
     --color-text-dark: #0c0c0c;
 }
 
@@ -8,5 +8,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-size: 20px;
+  font-size: 16px;
+}
+
+.aboutme {
+  text-align: center;
+  padding: 20px;
 }

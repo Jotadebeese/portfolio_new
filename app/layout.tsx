@@ -2,7 +2,7 @@ import '/styles/globals.css'
 import { PT_Serif } from 'next/font/google'
 import NavMenu from '@/components/NavMenu'
 
-const playfair = PT_Serif({ subsets: ['latin'], weight:['400'] })
+const pt_serif = PT_Serif({ subsets: ['latin'], weight:['400'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={playfair.className}>
+      <body className={pt_serif.className}>
         <NavMenu />
         {children}
       </body>
