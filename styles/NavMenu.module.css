@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 .nav {
     display: flex;
-    background-color: var(--color-gray);
+    background-color: var(--color-white);
     align-items: center;
     justify-content: space-around;
     font-size: 0.8rem;
+    color: var(--color-text-dark);
 }
 
 .nav img {
@@ -16,12 +19,14 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
 }
 
 .pagina button {
-    background-color: rgb(252, 245, 233);
+    background-color: var(--color-text-dark);
     border: none;
-    color: var(--color-text);
+    color: var(--color-gray);
     padding: 10px 20px;
     margin: 0;
     display: flex;
@@ -30,8 +35,10 @@
     justify-content: center;
     text-decoration: none;
     font-family: inherit;
+    font-size: inherit;
     border-radius: 10px;
     cursor: pointer;
+    box-shadow: 3px 3px 3px var(--color-gray);
 }
 
 .links {

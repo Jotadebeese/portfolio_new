@@ -1,6 +1,9 @@
 :root {
-    --color-gray: rgb(255, 255, 255);
-    --color-text-dark: #0c0c0c;
+  --color-white: rgb(255, 255, 255);
+  --color-gray: #e6dad1;
+  --color-text-dark: #000000;
+  --color-orange: #ff9355;
+  --color-red: rgb(243, 102, 102);
 }
 
 
@@ -9,6 +12,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: 16px;
+  color: var(--color-text-dark);
 }
 
 .aboutme {
