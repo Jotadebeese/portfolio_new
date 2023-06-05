@@ -6,14 +6,13 @@ export default function NavMenu() {
     return (
         <nav className={styles.nav}>
             <div className={styles.pagina}>
-            <Link href={'/'}>
+                <Link href={'/'}>
                     <Image
-                        src='/corgi.png'
+                        src='/jota.png'
                         width={50}
                         height={50}
                         alt="Juan's face"
                     />
-
                 </Link>
                 <p><i>By</i></p>
 
@@ -26,10 +25,10 @@ export default function NavMenu() {
                     <Link href={'/me'}>Me</Link>
                 </li>
                 <li>
-                    <Link href={'/blog'}>Projects</Link>
+                    <Link href={'/#projects-list'}>Projects</Link>
                 </li>
                 <li>
-                    <Link href={'/users'}>Get in Touch</Link>
+                    <Link href={'/users'}>Contact</Link>
                 </li>
             </ul>
         </nav>

@@ -47,6 +47,8 @@
     align-items: center;
     justify-content: space-evenly;
     list-style-type: none;
+    gap: 15px;
+    margin-right: 10px;
 }
 
 .nav a {
