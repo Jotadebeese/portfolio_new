@@ -1,10 +1,10 @@
 :root {
   --color-white: rgb(255, 255, 255);
-  --color-gray: #e6dad1;
+  --color-gray: #e6d9d1;
   --color-gray-2: #faf5f3;
   --color-text-dark: #000000;
   --color-text-light: #ffffff;
-  --color-orange: #ff9355;
+  --color-orange: #ffac7b;
   --color-red: rgb(243, 102, 102);
   --color-light-blue: rgb(237, 248, 255);
   --color-dark-gray: rgb(46, 46, 46);
@@ -17,6 +17,9 @@ body {
   margin: 0;
   font-size: 16px;
   color: var(--color-text-dark);
+  background-image: url("/temp.gif");
+  background-repeat: no-repeat;
+  background-position: 100% 55%;
 }
 
 .aboutme {
@@ -25,8 +28,18 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 500px;
+  height: 100vh;
   margin: 0 10px;
+  font-size: 1.5rem;
+  padding: 0;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .projects-list {
@@ -35,22 +48,26 @@ body {
   align-items: center;
   justify-content: center;
   padding: 50px 0;
-  border-top: 1px dashed var(--color-text-dark);
-  border-bottom: 1px dashed var(--color-text-dark);
+  width: 90%;
+  margin: 10px;
+  background-color: #ffffffd0;
+  border: 2px solid var(--color-text-dark);
+  max-width: 1500px;
 }
 
 .projects-list ul {
   list-style-type: none;
-  margin: 20px 0;
+  margin: 20px 10px;
   padding: 0;
-  max-width: 1500px;
+  
 }
 
 .projects-list ul li {
-  border-radius: 20px;
   padding: 20px 50px;
   margin: 15px;
-  background-color: var(--color-text-dark);
-  color: var(--color-gray);
+  background-color: var(--color-orange);
+  color: var(--color-text-dark);
+  border: 2px solid var(--color-text-dark);
   box-shadow: 5px 5px var(--color-gray), -5px -5px var(--color-dark-gray);
+  max-width: 1000px;
 }
