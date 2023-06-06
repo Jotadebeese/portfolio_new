@@ -19,19 +19,19 @@ body {
   color: var(--color-text-dark);
   background-image: url("/temp.gif");
   background-repeat: no-repeat;
-  background-position: 100% 55%;
+  background-position: 100% 5%;
 }
 
 .aboutme {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  text-align: center;
   height: 100vh;
-  margin: 0 10px;
+  max-width: 1000px;
+  margin: auto;
   font-size: 1.5rem;
-  padding: 0;
+  padding: 0 30px;
 }
 
 .projects-container {
