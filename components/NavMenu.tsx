@@ -31,12 +31,6 @@ export default function NavMenu() {
                 <li>
                     <Link href={'/users'}>Contact</Link>
                 </li>
-                <li>
-                    <SignInButton />
-                </li>
-                <li>
-                    <SignOutButton />
-                </li>
             </ul>
         </nav>
     )
