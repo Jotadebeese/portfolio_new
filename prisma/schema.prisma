@@ -60,3 +60,23 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+// Projects List Schema
+
+model Projects {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime
+  title       String   @db.VarChar(255)
+  description String
+  content     String
+  categority  String
+  published   Boolean  @default(false)
+  tech        Tech[]
+}
+
+model Tech {
+  id         Int      @id @default(autoincrement())
+  name       String   @unique
+  icon       String
+  projects   Projects[]
+}
