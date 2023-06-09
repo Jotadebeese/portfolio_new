@@ -8,11 +8,12 @@ async function write() {
         title: 'Alice',
         description: 'alice@prisma.io',
         content: 'alice@prisma.io',
+        categority: 'full_stack',
         createdAt: new Date("2023-06-05"),
         tech: {
           create: { 
-            name: 'Hello World',
-            icon: 'something here',
+            name: 'JavaScript',
+            icon: 'JS',
          },
         },
       },

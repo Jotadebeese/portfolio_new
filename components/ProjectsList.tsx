@@ -1,8 +1,20 @@
+import { prisma } from "@/lib/prisma";
+import { NextResponse } from 'next/server';
+
+async function GET(request: Request) {
+    const full_projects = await prisma.projects.findMany( {
+        where: { categority: "full_stack" },
+    });
+
+    return NextResponse.json(full_projects);
+}
+
 export default function ProjectsList() {
+
     return (
         <div className="projects-container">
             <div className="projects-list">
-                <h1>My projects</h1>
+                <h1>{full_projects.title}</h1>
                 <p>Feel free to look at them, in deep...</p>
                 <ul id="projects-list">
                     <li>
