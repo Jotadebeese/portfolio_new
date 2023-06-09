@@ -1,26 +1,32 @@
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from 'next/server';
+import Link from "next/link";
+import TechCard from '@/components/TechCard';
 
-async function GET(request: Request) {
-    const full_projects = await prisma.projects.findMany( {
-        where: { categority: "full_stack" },
+export default async function ProjectsList() {
+
+    const FullAllProjects = await prisma.projects.findMany({
+        where: { categority: 'full_stack' },
     });
-
-    return NextResponse.json(full_projects);
-}
-
-export default function ProjectsList() {
 
     return (
         <div className="projects-container">
             <div className="projects-list">
-                <h1>{full_projects.title}</h1>
+                <h1>Projects List</h1>
                 <p>Feel free to look at them, in deep...</p>
                 <ul id="projects-list">
-                    <li>
-                        <h3>PAGINA - Social Media App</h3>
-                        <p>A social Media app where users can create accounts, create posts using markdown, edit, publish and unpublish, like and dislike and see others users posts. </p>
-                    </li>
+                    {FullAllProjects.map((project) => {
+                        return (
+                            <li>
+                                <h3>{project.title}</h3>
+                                <p>{project.description}</p>
+                                <Link href={'/'}>
+                                    <small>Learn more...</small>
+                                </Link>
+                                <TechCard key={project.id} {...project} />
+                            </li>
+                        );
+                    })}
                 </ul>
             </div>
         </div>
