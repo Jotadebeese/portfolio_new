@@ -20,7 +20,7 @@ export default async function ProjectsList() {
                             <li>
                                 <h3>{project.title}</h3>
                                 <p>{project.description}</p>
-                                <Link href={'/'}>
+                                <Link href={`/${project.id}`}>
                                     <small>Learn more...</small>
                                 </Link>
                                 <TechCard key={project.id} {...project} />

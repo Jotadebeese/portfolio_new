@@ -1,28 +1,30 @@
 import { prisma } from "@/lib/prisma";
 
 interface Props {
-    id: string;
+    id: number;
     title: string | null;
 }
 
-export default async function Tech({id, title }: Props) {
+export default async function Tech({ id }: Props) {
 
-    const techs = await prisma.projects
+    const project = await prisma.projects
     .findUnique({
         where: { id: id},
-    })
-    .tech()
+        include: { tech: true}, // Include the related tech data
+    });
+
+    const techs = project?.tech || []; // Access 'tech' data from the project
 
     return (
-        <ul>
-            <p>Here</p>
-            {tech.map((tech) => {
-                <li>
-                    <p>here</p>
-                    <p>{tech.title}</p>
-                    <p>{tech.icon}</p>
-                </li>
+        <>
+            {techs.map((tech) => {
+                return (
+                    <div key={tech.id}>
+                        <p>{tech.name}</p>
+                        <p>{tech.icon}</p>
+                    </div>
+                );
             })}
-        </ul>
-    )
+        </>
+    );
 }
