@@ -1,6 +1,17 @@
 import Link from "next/link"
+import { getServerSession } from "next-auth"
+import { redirect } from 'next/navigation'
 
-export default function Admin() {
+
+export default async function Admin() {
+
+   /*  const session = await getServerSession();
+
+    if (!session) {
+        redirect('/api/auth/signin');
+        // return <p>You must be signed in...</p>
+    } */
+
     return (
         <section>
             <h1>Projects List</h1>

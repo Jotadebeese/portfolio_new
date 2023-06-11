@@ -2,25 +2,26 @@ import { prisma } from "@/lib/prisma";
 import TechCard from '@/components/TechCard';
 
 interface Props {
-    id: string;
-    title: string | null;
+    params: {
+        id: string;
+    };
 }
 
-export default async function Project({ id }: Props) {
+export default async function Project({ params }: Props) {
     
     const project = await prisma.projects
     .findUnique({
-        where: { id: id},
+        where: { id: parseInt(params.id)},
     });
 
-    const { createdAt, title, description, content } = project ?? {};
+    const { id, createdAt, title, description, content } = project ?? {};
     
     return (
-        <div>
+        <div className="fade-in project-container">
             <h1>{title}</h1>
             <TechCard key={id} {...project} />
             <p>{description}</p>
-            <p>{content}</p>
+            {content}
         </div>        
     )
 }
