@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from '/styles/NavMenu.module.css'
-import { SignInButton, SignOutButton } from "./buttons";
 
 export default function NavMenu() {
     return (
