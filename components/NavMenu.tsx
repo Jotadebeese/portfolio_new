@@ -25,7 +25,7 @@ export default function NavMenu() {
                     <Link href={'/me'}>Me</Link>
                 </li>
                 <li>
-                    <Link href={'/#projects-list'}>Projects</Link>
+                    <Link href={'/project'}>Projects</Link>
                 </li>
                 <li>
                     <Link href={'/users'}>Contact</Link>
