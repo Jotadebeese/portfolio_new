@@ -19,7 +19,7 @@ export default async function Project({ params }: Props) {
     return (
         <div className="fade-in project-container">
             <h1>{title}</h1>
-            <TechCard key={id} {...project} />
+            <TechCard techs={[]} key={id} {...project} />
             <p>{description}</p>
             {content}
         </div>        
