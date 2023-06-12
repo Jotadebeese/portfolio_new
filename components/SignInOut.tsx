@@ -1,5 +1,6 @@
 'use client';
 import { useSession, signIn, signOut } from 'next-auth/react';
+import Link from "next/link";
 
 export default function SignInOut() {
     const { data: session, status } = useSession();
@@ -18,17 +19,20 @@ export default function SignInOut() {
 
     if (status === "authenticated") {
         return (
-            <>
+            <div className='box-container'>
                 <p>Welcome {userName}</p>
-                <button onClick={() => signOut()}>Sign Out</button>
-            </>
+                <div className='little-box'>
+                    <Link className='btn' href={'/admin/new/'}>Add New</Link>
+                    <button onClick={() => signOut()}>Sign Out</button>
+                </div>
+            </div>
         )
     }
 
     return (
-        <>
+        <div className='box-container'>
             <p>Not signed in</p>
             <button onClick={() => signIn()}>Sign In</button>
-        </>
+        </div>
     )
 }

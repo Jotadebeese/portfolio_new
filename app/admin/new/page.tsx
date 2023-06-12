@@ -1,3 +1,4 @@
+import { AddNewForm } from '@/components/AddNewForm';
 import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
 
@@ -8,12 +9,9 @@ export default async function New() {
         redirect('/api/auth/signin');
     }
     return (
-        <div>
+        <div className='box-container'>
             <h3>Add new Project</h3>
-            <form>
-                <label>Hi</label>
-                <input />
-            </form>
+            <AddNewForm />
         </div>
     )
 }

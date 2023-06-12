@@ -20,6 +20,81 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Buttons */
+
+button, .btn {
+  background-color: var(--color-text-dark);
+  border: none;
+  color: var(--color-gray);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  justify-content: center;
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0;
+  white-space: nowrap;
+  transition: ease 0.3s;
+}
+
+button:hover, .btn:hover {
+  filter: brightness(80%);
+  transition: ease 0.3s;
+}
+
+button:disabled,
+button[disabled]{
+  filter: brightness(50%);
+  cursor: not-allowed;
+  transition: ease 0.3s;
+}
+
+/* Boxes & Containers */
+
+.little-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.little-container-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 100px;
+  min-height: 200px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 20px;
+}
+
+.form-container input {
+  width: 70%;
+  max-width: 1000px;
+}
+
 .aboutme {
   display: flex;
   flex-direction: column;
@@ -55,19 +130,19 @@ body {
 
 .projects-list ul {
   list-style-type: none;
-  margin: 20px 10px;
   padding: 0;
-  
+  width: 100%;
 }
 
-.projects-list ul li {
+.projects-list ul li, .single-project {
+  list-style-type: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
   padding: 25px;
-  margin: 10px;
+  margin: 10px 15px;
   background-color: var(--color-orange);
   color: var(--color-text-dark);
   border: 2px solid var(--color-text-dark);
@@ -118,15 +193,6 @@ body {
 .push-left {
   margin: 0;
   margin-left: auto;
-}
-
-.little-container-left {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  width: 100%;
-  margin-top: 10px;
 }
 
 /* Loader */
