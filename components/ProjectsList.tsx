@@ -1,35 +1,21 @@
-"use client"
-
 import { prisma } from "@/lib/prisma";
-import { NextResponse } from 'next/server';
 import Link from "next/link";
 import TechCard from '@/components/TechCard';
-import { useEffect, useState } from "react";
 
-export default function ProjectsList() {
+export default async function ProjectsList() {
 
-    const [fullStackProjects, setFullStackProjects] = useState([]);
-
-    useEffect(() => {
-        async function fetchProjects() {
-            const projects = await prisma.projects.findMany({
-                where: { categority: 'full_stack' },
-                orderBy: { createdAt: 'desc'},
-            }); 
-            
-            setFullStackProjects(projects)
-        }
-
-        fetchProjects();
-    }, []);
+    const FullAllProjects = await prisma.projects.findMany({
+        where: { categority: 'full_stack' },
+        orderBy: { createdAt: 'desc'},
+    });
 
     return (
         <div className="projects-container fade-in">
             <div className="projects-list">
                 <h1>Projects List</h1>
-                <p>Feel free to look at them, in deep...</p>
+                <p>Feel free to look at them.</p>
                 <ul id="projects-list">
-                    {fullStackProjects.map((project) => {
+                    {FullAllProjects.map((project) => {
                         const createdAt = project.createdAt.toLocaleDateString("en-US", {
                             year: "numeric",
                             month: "long",

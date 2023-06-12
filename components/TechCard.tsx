@@ -2,7 +2,6 @@ import { prisma } from "@/lib/prisma";
 
 interface Props {
     id: number;
-    title: string | null;
 }
 
 export default async function Tech({ id }: Props) {
