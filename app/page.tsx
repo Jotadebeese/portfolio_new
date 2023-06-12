@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <AboutMe />
-      <ProjectsList />
+      <ProjectsList AllProjects={[]} />
       <GetInTouch />
     </main>
   )

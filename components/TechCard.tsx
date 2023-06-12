@@ -4,15 +4,17 @@ interface Props {
     id: number;
 }
 
-export default async function Tech({ id }: Props) {
+interface Techs {
+    id: number;
+    icon: string;
+    name: string;
+}
 
-    const project = await prisma.projects
-    .findUnique({
-        where: { id: id},
-        include: { tech: true}, // Include the related tech data
-    });
+interface TechsProps {
+    techs: Techs[];
+}
 
-    const techs = project?.tech || []; // Access 'tech' data from the project
+export default function Tech({ techs }: TechsProps) {
 
     return (
         <div className="techCard-container">
@@ -30,4 +32,20 @@ export default async function Tech({ id }: Props) {
             })}
         </div>
     );
+}
+
+export async function name({ id }: Props): Promise<{ props: TechsProps }> {
+    const project = await prisma.projects
+    .findUnique({
+        where: { id: id},
+        include: { tech: true}, // Include the related tech data
+    });
+
+    const techs: Techs[] = project?.tech || []; // Access 'tech' data from the project
+
+    return {
+        props: {
+            techs,
+        },
+    };    
 }
