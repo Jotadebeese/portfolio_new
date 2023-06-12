@@ -1,7 +1,5 @@
 'use client';
 
-import { redirect } from 'next/navigation';
-
 export function EditForm({ project }: any) {
 
     const updatedProject = async (e: React.FormEvent<HTMLFormElement>) => {

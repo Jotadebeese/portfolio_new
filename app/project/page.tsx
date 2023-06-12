@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";
+import TechCard  from "../../components/TechCard";
 
 export default async function () {
 
@@ -31,7 +32,8 @@ export default async function () {
                                 </div>
 
                                 <p>{project.description}</p>
-                                {getTech(project.id)}
+                                {/* @ts-expect-error Server Component */}
+                                <TechCard project={project} />
                           </li>
                       );
                   })}
@@ -40,40 +42,3 @@ export default async function () {
       </div>
     );
 }
-
-interface Props {
-    id: number;
-  }
-  
-  interface Techs {
-    id: number;
-    icon: string;
-    name: string;
-  }
-  
-  export async function getTech(id: Props) {
-    const project = await prisma.projects
-    .findUnique({
-        where: { id: id},
-        include: { tech: true}, // Include the related tech data
-    });
-  
-    const techs: Techs[] = project?.tech || []; // Access 'tech' data from the project
-  
-    return (
-        <div className="techCard-container">
-            {techs.map((tech) => {
-                return (
-                    <div className='tech-card' key={tech.id}>
-                        <img 
-                            src={tech.icon}
-                            width={40}
-                            alt="Icon of technology"
-                        />
-                        <p>{tech.name}</p>
-                    </div>
-                );
-            })}
-        </div>
-    );
-  }
