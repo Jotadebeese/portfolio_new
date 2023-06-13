@@ -32,7 +32,7 @@ button, .btn {
   text-decoration: none;
   justify-content: center;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: inherit;
   border-radius: 10px;
   cursor: pointer;
   margin: 0;
@@ -99,10 +99,9 @@ button[disabled]{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  height: 100vh;
+  justify-content: space-evenly;
   max-width: 1000px;
-  margin: auto;
+  margin: 150px auto;
   font-size: 1.5rem;
   padding: 0 30px;
 }
