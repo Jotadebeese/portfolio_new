@@ -128,10 +128,11 @@ button[disabled]{
   justify-content: center;
   padding: 50px 0;
   width: 90%;
-  margin: 10px;
+  margin: 50px 10px;
   background-color: #ffffffd0;
   border: 2px solid var(--color-text-dark);
   max-width: 1500px;
+  gap: 20px;
 }
 
 .list-container {

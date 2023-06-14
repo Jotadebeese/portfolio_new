@@ -14,7 +14,7 @@ export default async function ProjectsCard({categority}: any) {
                 where: { categority: categority },
                 orderBy: { createdAt: 'desc'},
             });
-            console.log(AllProjects.length)
+            
             return (
                 <ul className="list-container fade-in">
                     {AllProjects.length === 0 ? <p>Noting to show here, for now...</p> : AllProjects.map((project: project) => {
@@ -28,7 +28,7 @@ export default async function ProjectsCard({categority}: any) {
                           <li className="single-project" key={project.id}>
                                 <div className="little-container-left">
                                     <span className="push-left">{createdAt}</span>
-                                    <Link href={`/project/${project.id}`}>
+                                    <Link href={`/project/single/${project.id}`}>
                                         <h3>{project.title}</h3>
                                     </Link>
                                 </div>

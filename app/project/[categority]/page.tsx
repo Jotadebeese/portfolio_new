@@ -8,8 +8,9 @@ export default function ProjectsList(categority: any) {
 
     return (
         <div className="projects-container">
-                
                 <div className="projects-list">
+                    <h2>Project List</h2>
+                    <p>Feel free to look at them.</p>
                     <div className="little-box">
                         <Link href={'/project/full_stack'} className={category === 'full_stack'? 'btn select' : 'btn'} >Full Stack</Link>
                         <Link href={'/project/machine'} className={category === 'machine'? 'btn select' : 'btn'} >Machine Learning</Link>
