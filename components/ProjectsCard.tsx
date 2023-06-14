@@ -1,17 +1,23 @@
 import {prisma} from "@/lib/prisma";
 import Link from "next/link";
-import TechCard  from "../../components/TechCard";
+import TechCard  from "./TechCard";
 
-export default async function ProjectsCard() {
+interface project {
+    id: number;
+    title: string;
+    description: string;
+    createdAt: Date;
+}
+export default async function ProjectsCard({categority}: any) {
 
             const AllProjects = await prisma.projects.findMany({
-                where: { categority: 'full_stack' },
+                where: { categority: categority },
                 orderBy: { createdAt: 'desc'},
             });
-            prisma.$disconnect()
+            console.log(AllProjects.length)
             return (
-                <ul>
-                    {AllProjects.map((project) => {
+                <ul className="list-container fade-in">
+                    {AllProjects.length === 0 ? <p>Noting to show here, for now...</p> : AllProjects.map((project: project) => {
                         const createdAt = project.createdAt.toLocaleDateString("en-US", {
                             year: "numeric",
                             month: "long",
@@ -19,7 +25,7 @@ export default async function ProjectsCard() {
                           });
 
                         return (
-                          <li key={project.id}>
+                          <li className="single-project" key={project.id}>
                                 <div className="little-container-left">
                                     <span className="push-left">{createdAt}</span>
                                     <Link href={`/project/${project.id}`}>

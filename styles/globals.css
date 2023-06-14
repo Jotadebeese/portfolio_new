@@ -40,6 +40,12 @@ button, .btn {
   transition: ease 0.3s;
 }
 
+.select {
+    background-color: var(--color-text-dark);
+    color: var(--color-orange);
+    box-shadow: 3px 3px 3px var(--color-orange);
+}
+
 button:hover, .btn:hover {
   filter: brightness(80%);
   transition: ease 0.3s;
@@ -59,7 +65,8 @@ button[disabled]{
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .little-container-left {
@@ -127,13 +134,12 @@ button[disabled]{
   max-width: 1500px;
 }
 
-.projects-list ul {
+.list-container {
   list-style-type: none;
   padding: 0;
-  width: 100%;
 }
 
-.projects-list ul li, .single-project {
+.single-project {
   list-style-type: none;
   display: flex;
   flex-direction: column;

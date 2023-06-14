@@ -1,4 +1,5 @@
-import ProjectsCard from "./ProjectsCard";
+import ProjectsCard from "@/components/ProjectsCard";
+import Link from "next/link";
 
 interface Props {
     categority: string;
@@ -8,24 +9,17 @@ export default function ProjectsList() {
 
 
     return (
-        <div className="projects-container">
+        <div className="projects-container fade-in">
                 
-                <div className="projects-list">
+
                     <div className="little-box">
-                        <button >Full Stack</button>
-                        <button >Machine Learning</button>
-                        <button >Embedded Systems</button>
+                        <Link href={'/project/full_stack'} className="btn select" >Full Stack</Link>
+                        <Link href={'/project/machine'} className="btn" >Machine Learning</Link>
+                        <Link href={'/project/ebedded'} className="btn" >Embedded Systems</Link>
                     </div>
                     {/* @ts-expect-error Server Component */}
-                    <ProjectsCard />
-                </div>
+                    <ProjectsCard categority={'full_stack'} />
+
       </div>
     );
-}
-
-export function changeCategority(n: number) {
-    "use client";
-    if (n==1) {
-        return <p>Something here</p>
-    }
 }
