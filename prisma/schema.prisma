@@ -16,11 +16,13 @@ datasource db {
 
 model Projects {
   id          Int      @id @default(autoincrement())
-  createdAt   DateTime
   title       String   @db.VarChar(255)
   description String
   content     String
   categority  String
+  createdAt   DateTime
+  github      String
+  live        String
   published   Boolean  @default(false)
   tech        Tech[]
 }

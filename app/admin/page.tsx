@@ -13,15 +13,14 @@ export default async function Admin() {
     }
 
     const AllProjects = await prisma.projects.findMany({
-        where: { categority: 'full_stack' },
         orderBy: { createdAt: 'desc'},
     });
 
-    return (
-        <section className={styles.main}>
+    return ( 
+        <section className='projects-container fade-in'>
             <SignInOut />
-            <h2>Projects List</h2>
-            <ul className="single-project">
+            <h2>Projects</h2>
+            <ul className="list-contaier fade-in">
                     {AllProjects.map((project) => {
                         const createdAt = project.createdAt.toLocaleDateString("en-US", {
                             year: "numeric",
@@ -30,16 +29,16 @@ export default async function Admin() {
                           });
 
                         return (
-                          <li key={project.id}>
+                          <li className="single-project" key={project.id}>
                                 <div className="little-container-left">
                                     <span className="push-left">{createdAt}</span>
                                     <Link href={`/project/${project.id}`}>
-                                        <h3>{project.title}</h3>
+                                        <h3 className="project-title">{project.title}</h3>
                                     </Link>
                                 </div>
                                 <p>{project.description}</p>
                                 {project.published? <span>Published</span> : <span>Unpublished</span> }
-                                <Link className='btn' href={`/admin/edit/${project.id}`}>
+                                <Link className='btn btn-gray' href={`/admin/edit/${project.id}`}>
                                         Edit
                                 </Link>
                                 

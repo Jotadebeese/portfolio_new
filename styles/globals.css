@@ -20,6 +20,45 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Projects */
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 50px 0;
+  gap: 20px;
+}
+
+.list-container {
+  list-style-type: none;
+  padding: 0;
+}
+
+.single-project {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px 15px;
+  background-color: var(--color-gray-2);
+  color: var(--color-text-dark);
+  border: 2px solid var(--color-text-dark);
+  box-shadow: 5px 5px var(--color-gray), -5px -5px var(--color-dark-gray);
+  max-width: 1000px;
+}
+
+.project-title {
+  color: var(--color-dark-gray);
+  cursor: pointer;
+}
+
 /* Buttons */
 
 button, .btn {
@@ -84,7 +123,6 @@ button[disabled]{
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  margin-top: 100px;
   min-height: 200px;
 }
 
@@ -108,48 +146,9 @@ button[disabled]{
   align-items: flex-start;
   justify-content: space-evenly;
   max-width: 1000px;
-  margin: 150px auto;
+  margin: 100px auto;
   font-size: 1.5rem;
   padding: 0 30px;
-}
-
-/* Projects */
-
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 100px 0;
-  gap: 20px;
-}
-
-.list-container {
-  list-style-type: none;
-  padding: 0;
-}
-
-.single-project {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  border-radius: 20px;
-  padding: 20px;
-  margin: 10px 15px;
-  background-color: var(--color-gray-2);
-  color: var(--color-text-dark);
-  border: 2px solid var(--color-text-dark);
-  box-shadow: 5px 5px var(--color-gray), -5px -5px var(--color-dark-gray);
-  max-width: 1000px;
-}
-
-.single-project a {
-  color: var(--color-dark-gray);
-  cursor: pointer;
 }
 
 /* Teech cards */
@@ -171,16 +170,6 @@ button[disabled]{
   font-size: 0.8rem;
 }
 
-/* Single Project */
-
-.project-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin: 100px 0;
-}
 /* Utilities */
 
 .text-sm {

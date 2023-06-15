@@ -29,7 +29,7 @@ export default async function ProjectsCard({categority}: any) {
                                 <div className="little-container-left">
                                     <span className="push-left">{createdAt}</span>
                                     <Link href={`/project/single/${project.id}`}>
-                                        <h3>{project.title}</h3>
+                                        <h3 className="project-title">{project.title}</h3>
                                     </Link>
                                 </div>
 
