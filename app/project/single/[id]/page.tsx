@@ -14,7 +14,7 @@ export default async function Project({ params }: Props) {
         where: { id: parseInt(params.id)},
     });
 
-    const { id, createdAt, title, description, content } = project ?? {};
+    const { id, createdAt, title, description } = project ?? {};
     
     return (
         <div className="fade-in project-container">
