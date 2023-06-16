@@ -7,7 +7,7 @@ export default function ProjectsList(categority: any) {
     const category = categority.params.categority;
 
     return (
-        <div className="projects-container fade-in">
+        <div className="projects-container">
             <h2>Projects</h2>
             <p>Divided in three categories:</p>
             <div className="little-box">

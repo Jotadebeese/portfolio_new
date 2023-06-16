@@ -20,7 +20,7 @@ export default async function Admin() {
         <section className='projects-container fade-in'>
             <SignInOut />
             <h2>Projects</h2>
-            <ul className="list-contaier fade-in">
+            <ul className="list-container fade-in">
                     {AllProjects.map((project) => {
                         const createdAt = project.createdAt.toLocaleDateString("en-US", {
                             year: "numeric",
@@ -35,9 +35,19 @@ export default async function Admin() {
                                     <Link href={`/project/single/${project.id}`}>
                                         <h3 className="project-title">{project.title}</h3>
                                     </Link>
+                                    <p>{project.description}</p>
                                 </div>
-                                <p>{project.description}</p>
-                                {project.published? <span>Published</span> : <span>Unpublished</span> }
+                                {project.published? 
+                                    <div className="little-box">
+                                        <div className="dot green"></div>
+                                        <p>Published</p>
+                                    </div>
+                                 : 
+                                    <div className="little-box">
+                                        <div className="dot red"></div>
+                                        <p>Unpublished</p>
+                                    </div> 
+                                }
                                 <Link className='btn btn-gray' href={`/admin/edit/${project.id}`}>
                                         Edit
                                 </Link>

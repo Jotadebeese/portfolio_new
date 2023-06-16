@@ -13,7 +13,7 @@ interface project {
 export default async function ProjectsCard({categority}: any) {
 
             const AllProjects = await prisma.projects.findMany({
-                where: { categority: categority },
+                where: { categority: categority, published: true },
                 orderBy: { createdAt: 'desc'},
             });
             
@@ -33,12 +33,14 @@ export default async function ProjectsCard({categority}: any) {
                                     <Link href={`/project/single/${project.id}`}>
                                         <h3 className="project-title">{project.title}</h3>
                                     </Link>
+                                    <p>{project.description}</p>
                                 </div>
 
-                                <p>{project.description}</p>
                                 <div className="little-box">
                                     <Link className="btn" href={`${project.github}`}>GitHub</Link>
-                                    <Link className="btn" href={`${project.live}`}>See it Live</Link>
+                                    {project.live && (
+                                        <Link className="btn" href={`${project.live}`}>See it Live</Link>
+                                    )}
                                 </div>
                                 {/* @ts-expect-error Server Component */}
                                 <TechCard project={project} />

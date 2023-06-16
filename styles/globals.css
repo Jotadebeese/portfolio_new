@@ -8,6 +8,7 @@
   --color-red: rgb(243, 102, 102);
   --color-light-blue: rgb(237, 248, 255);
   --color-dark-gray: rgb(46, 46, 46);
+  --color-green: #cdee7f;
 }
 
 
@@ -43,7 +44,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 30px;
   border-radius: 20px;
   padding: 20px;
   margin: 10px 15px;
@@ -168,7 +169,7 @@ button[disabled]{
   padding: 0 30px;
 }
 
-/* Teech cards */
+/* Tech cards */
 
 .techCard-container {
   display: flex;
@@ -177,6 +178,7 @@ button[disabled]{
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 .tech-card {
@@ -198,6 +200,20 @@ button[disabled]{
   margin-left: auto;
 }
 
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--color-text-dark);
+}
+
+.green {
+  background-color: var(--color-green);
+}
+
+.red {
+  background-color: var(--color-red);
+}
 /* Loader */
 
 .loader-container {
