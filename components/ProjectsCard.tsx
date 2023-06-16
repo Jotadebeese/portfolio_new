@@ -19,7 +19,7 @@ export default async function ProjectsCard({categority}: any) {
             
             return (
                 <ul className="list-container fade-in">
-                    {AllProjects.length === 0 ? <p>Noting to show here, for now...</p> : AllProjects.map((project: project) => {
+                    {AllProjects.length === 0 ? <p>Noting to show here, for now...</p> : AllProjects.map((project) => {
                         const createdAt = project.createdAt.toLocaleDateString("en-US", {
                             year: "numeric",
                             month: "long",
