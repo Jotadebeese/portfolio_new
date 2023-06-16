@@ -22,7 +22,6 @@ export default async function Project({ params }: Props) {
             {/* @ts-expect-error Server Component */}
             <TechCard project={project} />
             <p>{description}</p>
-            {content}
         </div>        
     )
 }
