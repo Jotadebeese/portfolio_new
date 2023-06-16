@@ -56,6 +56,7 @@ body {
 
 .project-title {
   color: var(--color-dark-gray);
+  text-decoration: underline;
   cursor: pointer;
 }
 
@@ -133,13 +134,29 @@ button[disabled]{
   justify-content: space-evenly;
   width: 100%;
   gap: 20px;
+  margin-top: 20px;
 }
 
-.form-container input {
+
+.form-container input, .form-container textarea {
   width: 70%;
   max-width: 1000px;
+  font-family: inherit;
+  font-size: 0.8rem;
+  color: inherit;
+  outline: none;
+  border: 1px solid var(--color-text-dark);
+  border-radius: 10px;
+  padding: 10px 10px;
+  opacity: 50%;
+  transition: ease 0.3s;
+  background-color: var(--color-gray-2);
 }
 
+.form-container input:focus, .form-container textarea:focus {
+  opacity: 100%;
+  transition: ease 0.3s;
+}
 .aboutme {
   display: flex;
   flex-direction: column;

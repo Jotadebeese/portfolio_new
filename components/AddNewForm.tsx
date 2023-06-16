@@ -10,9 +10,10 @@ export function AddNewForm() {
         const body = {
             title: formData.get('title'),
             description: formData.get('description'),
-            content: formData.get('content'),
             categority: formData.get('categority'),
             createdAt: formData.get('createdAt'),
+            github: formData.get('github'),
+            live: formData.get('live'),
             published: formData.get('published')
         };
 
@@ -30,27 +31,25 @@ export function AddNewForm() {
     return (
         <form className="form-container" onSubmit={addNew}>
             <label htmlFor="title">Title</label>
-            <input type="text" name="title" placeholder='Add title' />
+            <input type="text" name="title" placeholder='Add title' required />
             <label htmlFor="description">Description</label>
             <textarea
                 name="description"
                 cols={30}
                 rows={30}
                 placeholder='Add description'
+                required
             ></textarea>
-            <label htmlFor="content">Content</label>
-            <textarea
-                name="content"
-                cols={30}
-                rows={50}
-                placeholder='Add Content'
-            ></textarea>
+            <label htmlFor="github">GitHub Repository</label>
+            <input type='text' name="github"  placeholder="GitHub Link" />
+            <label htmlFor="live">Live</label>
+            <input type='text' name='live' placeholder='Link of live project' />
             <label htmlFor="createdAt">Created At</label>
-            <input type="date" name="createdAt" />
+            <input type="date" name="createdAt" required />
             <label htmlFor="categority">Categority</label>
-            <input type="text" name="categority" placeholder="Add categority"/>
+            <input type="text" name="categority" placeholder="Add categority" required />
             <label htmlFor="published">Published</label>
-            <input type="checkbox" name="published" value="true" />
+            <input type="checkbox" name="published" defaultValue="false" />
 
             <button type="submit">Save</button>
         </form>

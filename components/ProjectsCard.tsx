@@ -7,6 +7,8 @@ interface project {
     title: string;
     description: string;
     createdAt: Date;
+    github: string;
+    live: string;
 }
 export default async function ProjectsCard({categority}: any) {
 
@@ -34,6 +36,10 @@ export default async function ProjectsCard({categority}: any) {
                                 </div>
 
                                 <p>{project.description}</p>
+                                <div className="little-box">
+                                    <Link className="btn" href={`${project.github}`}>GitHub</Link>
+                                    <Link className="btn" href={`${project.live}`}>See it Live</Link>
+                                </div>
                                 {/* @ts-expect-error Server Component */}
                                 <TechCard project={project} />
                           </li>

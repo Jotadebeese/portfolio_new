@@ -32,7 +32,7 @@ export default async function Admin() {
                           <li className="single-project" key={project.id}>
                                 <div className="little-container-left">
                                     <span className="push-left">{createdAt}</span>
-                                    <Link href={`/project/${project.id}`}>
+                                    <Link href={`/project/single/${project.id}`}>
                                         <h3 className="project-title">{project.title}</h3>
                                     </Link>
                                 </div>
