@@ -37,9 +37,11 @@ export default async function ProjectsCard({categority}: any) {
                                 </div>
 
                                 <div className="little-box">
-                                    <Link className="btn" href={`${project.github}`}>GitHub</Link>
+                                    {project.github && (
+                                        <Link target="_blank" className="btn" href={`${project.github}`}>GitHub</Link>
+                                    )}
                                     {project.live && (
-                                        <Link className="btn" href={`${project.live}`}>See it Live</Link>
+                                        <Link target="_blank" className="btn" href={`${project.live}`}>See it Live</Link>
                                     )}
                                 </div>
                                 {/* @ts-expect-error Server Component */}
