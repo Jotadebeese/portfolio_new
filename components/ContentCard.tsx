@@ -10,7 +10,7 @@ interface Content {
     point6: string;
 }
 
-export default async function({ project }: any) {
+export default async function ContentCard({ project }: any) {
     const getproject = await prisma.projects
     .findUnique({
         where: { id: project.id},
