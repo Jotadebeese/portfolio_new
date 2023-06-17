@@ -15,9 +15,9 @@ export default async function Project({ params }: Props) {
         where: { id: parseInt(params.id)},
     });
 
-    const { id, createdAt, title, description } = project ?? {};
+    const { title, description } = project ?? {};
 
-    const createdat = createdAt.toLocaleDateString("en-US", {
+    const createdat = project?.createdAt.toLocaleDateString("en-US", {
         year: "numeric",
         month: "long",
         day: "numeric",
