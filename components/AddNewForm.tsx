@@ -1,6 +1,9 @@
 'use client';
 
+import { useRouter } from "next/navigation";
+
 export function AddNewForm() {
+    const router = useRouter();
 
     const addNew = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -26,7 +29,8 @@ export function AddNewForm() {
         });
 
         await res.json();
-    };
+        router.push('/admin');
+    };  
 
     return (
         <form className="form-container" onSubmit={addNew}>
