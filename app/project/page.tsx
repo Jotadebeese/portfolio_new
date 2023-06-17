@@ -15,7 +15,7 @@ export default function ProjectsList() {
             <div className="little-box">
                 <Link href={'/project/machine'} className="btn" >Machine Learning</Link>
                 <Link href={'/project/full_stack'} className="btn select" >Full Stack</Link>
-                <Link href={'/project/ebedded'} className="btn" >Embedded Systems</Link>
+                <Link href={'/project/embedded'} className="btn" >Embedded Systems</Link>
             </div>
             {/* @ts-expect-error Server Component */}
             <ProjectsCard categority={'full_stack'} />

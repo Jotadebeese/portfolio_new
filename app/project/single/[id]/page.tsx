@@ -1,3 +1,4 @@
+import ContentCard from "@/components/ContentCard";
 import TechCard from "@/components/TechCard";
 import { prisma } from "@/lib/prisma";
 
@@ -15,13 +16,24 @@ export default async function Project({ params }: Props) {
     });
 
     const { id, createdAt, title, description } = project ?? {};
+
+    const createdat = createdAt.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
     
     return (
         <div className="fade-in project-container">
-            <h1>{title}</h1>
+            <div className="item1">
+                <h1>{title}</h1>
+                <small>{createdat}</small>
+            </div>
             {/* @ts-expect-error Server Component */}
             <TechCard project={project} />
             <p>{description}</p>
+            {/* @ts-expect-error Server Component */}
+            <ContentCard project={project} />
         </div>        
     )
 }
