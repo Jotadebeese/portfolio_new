@@ -1,6 +1,6 @@
 import { prisma } from "@/lib/prisma";
 
-interface Content {
+interface points {
     id: number;
     point1: string;
     point2: string;
@@ -17,11 +17,11 @@ export default async function ContentCard({ project }: any) {
         include: { content: true}, // Include the related tech data
     });
 
-    const content: Content[] = getproject?.content || [];
+    const content: any = getproject?.content ;
 
     return (
         <>
-            {content.map((points) => {
+            {content.map((points:points) => {
                 return (
                     <ul className="contentCard-container">
                         {points.point1 && (
