@@ -14,7 +14,7 @@ export default async function ContentCard({ project }: any) {
     const getproject = await prisma.projects
     .findUnique({
         where: { id: project.id},
-        include: { content: true },
+        include: { content: true}, // Include the related tech data
     });
 
     const content: Content[] = getproject?.content || [];
