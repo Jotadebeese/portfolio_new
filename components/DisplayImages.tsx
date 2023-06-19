@@ -15,7 +15,7 @@ interface image {
     const images: any = getproject?.images || []; // Access 'tech' data from the project
 
     return (
-      <div className="image-container">
+      <div className="image-container fade-in">
         {images.map((image:image) => {
           return <img  className="single-image" key={image.id} src={image.key} alt={`Project Image ${image.id + 1}`} width={300} />
         })}

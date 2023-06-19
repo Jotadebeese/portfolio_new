@@ -1,5 +1,7 @@
 import ProjectsCard from "@/components/ProjectsCard";
 import Link from "next/link";
+import { Suspense } from "react";
+import LoadingUsers from "../loading";
 
 
 export default function ProjectsList(categority: any) {
@@ -16,7 +18,11 @@ export default function ProjectsList(categority: any) {
                 <Link href={'/project/embedded'} className={category === 'embedded'? 'btn select' : 'btn'} >Embedded Systems</Link>
             </div>
             {/* @ts-expect-error Server Component */}
-            <ProjectsCard categority={categority.params.categority} />
+            <Suspense fallback={<LoadingUsers />}>
+                {/* @ts-expect-error Server Component */}
+                <ProjectsCard categority={categority.params.categority} />
+            </Suspense>
+            
         </div>
     );
 }

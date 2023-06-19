@@ -1,5 +1,7 @@
 import ProjectsCard from "@/components/ProjectsCard";
 import Link from "next/link";
+import { Suspense } from "react";
+import LoadingUsers from "./loading";
 
 interface Props {
     categority: string;
@@ -18,7 +20,10 @@ export default function ProjectsList() {
                 <Link href={'/project/embedded'} className="btn" >Embedded Systems</Link>
             </div>
             {/* @ts-expect-error Server Component */}
-            <ProjectsCard categority={'full_stack'} />
+            <Suspense fallback={<LoadingUsers />}>
+                {/* @ts-expect-error Server Component */}
+                <ProjectsCard categority={'full_stack'} />
+            </Suspense>
       </div>
     );
 }
