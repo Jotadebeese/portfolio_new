@@ -20,6 +20,7 @@ model Projects {
   published   Boolean  @default(false)
   tech        Tech[]
   content     Content[]
+  images      Images[]
 }
 
 model Tech {
@@ -37,5 +38,11 @@ model Content {
   point4    String?
   point5    String?
   point6    String?
+  projects  Projects[]
+}
+
+model Images {
+  id        Int @id @default(autoincrement())
+  key       String?
   projects  Projects[]
 }

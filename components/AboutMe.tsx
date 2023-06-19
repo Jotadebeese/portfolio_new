@@ -5,7 +5,7 @@ export default function AboutMe() {
         <div className="aboutme">
             <h1>Hi, I'm Juan</h1>
             <p>A Software Developer, with background in electronics engineering and a big passion in AI.</p>
-            <small>Always dreaming...</small>
+            <small>Deciding my future.</small>
             <br/>
             <p>Now,</p>
             <Link className="btn" href={'/project'}>Go and check my work!</Link>

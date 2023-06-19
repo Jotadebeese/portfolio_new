@@ -10,7 +10,7 @@ export default function ProjectsList() {
 
     return (
         <div className="projects-container fade-in">
-            <h2>Projects</h2>
+            <h2>My work</h2>
             <p>Divided in three categories:</p>
             <div className="little-box">
                 <Link href={'/project/machine'} className="btn" >Machine Learning</Link>

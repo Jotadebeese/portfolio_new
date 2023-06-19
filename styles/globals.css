@@ -21,6 +21,7 @@ body {
   scroll-behavior: smooth;
 }
 
+
 /* Projects */
 
 .projects-container {
@@ -121,6 +122,24 @@ button[disabled]{
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+/* Project Images */
+.image-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-bottom: 20px;
+  gap: 5px;
+}
+
+.single-image {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border: 2px solid var(--color-dark-gray);
 }
 /* Boxes & Containers */
 

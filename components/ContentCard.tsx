@@ -21,6 +21,7 @@ export default async function ContentCard({ project }: any) {
 
     return (
         <>
+            <h4>Main points:</h4>
             {content.map((points:points) => {
                 return (
                     <ul className="contentCard-container">
