@@ -1,7 +1,7 @@
+import LoadingUsers from "@/app/loading";
 import ProjectsCard from "@/components/ProjectsCard";
 import Link from "next/link";
 import { Suspense } from "react";
-import LoadingUsers from "../loading";
 
 
 export default function ProjectsList(categority: any) {

@@ -1,7 +1,7 @@
 import ProjectsCard from "@/components/ProjectsCard";
 import Link from "next/link";
 import { Suspense } from "react";
-import LoadingUsers from "./loading";
+import LoadingUsers from "@/app/loading";
 
 interface Props {
     categority: string;
