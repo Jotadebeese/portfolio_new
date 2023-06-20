@@ -47,8 +47,10 @@ export default async function Project({ params }: Props) {
                 <ContentCard project={project} />
                 <h4>Some screenshots:</h4>
             </div>      
-            {/* @ts-expect-error Server Component */}
-            <DisplayImages project={project} />
+            <div className="images-box">
+                {/* @ts-expect-error Server Component */}
+                <DisplayImages project={project} />
+            </div>
         </>  
     )
 }
