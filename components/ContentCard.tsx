@@ -1,4 +1,3 @@
-import { prisma } from "@/lib/prisma";
 
 interface points {
     id: number;
@@ -10,14 +9,9 @@ interface points {
     point6: string;
 }
 
-export default async function ContentCard({ project }: any) {
-    const getproject = await prisma.projects
-    .findUnique({
-        where: { id: project.id},
-        include: { content: true}, // Include the related tech data
-    });
+export default function ContentCard({ project }: any) {
 
-    const content: any = getproject?.content ;
+    const content: any = project?.content ;
 
     return (
         <>

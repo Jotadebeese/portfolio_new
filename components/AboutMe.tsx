@@ -8,7 +8,7 @@ export default function AboutMe() {
             <small>Deciding my future.</small>
             <br/>
             <p>Now,</p>
-            <Link className="btn" href={'/project'}>Go and check my work!</Link>
+            <Link className="btn" href={'/project/full_stack'}>Go and check my work!</Link>
             <p>or...</p>
             <Link className="btn" href={'/contact'}>Contact me!</Link>
         </div>

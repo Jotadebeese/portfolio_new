@@ -3,7 +3,7 @@ export default async function LoadingUsers() {
     <div className="loader-container fade-in">
         <img src="/temp.gif" />
         <div className="loader"></div>
-        <p>Loading projects  .  .  .</p>
+        <p>Fetching project data  .  .  .</p>
     </div>
     );
   }

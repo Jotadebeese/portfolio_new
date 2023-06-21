@@ -15,6 +15,7 @@ export default async function Project({ params }: Props) {
     const project = await prisma.projects
     .findUnique({
         where: { id: parseInt(params.id)},
+        include: { images: true, content: true, tech: true}, // Include the related tech data
     });
 
     const { title, description, github, live } = project ?? {};
@@ -40,15 +41,12 @@ export default async function Project({ params }: Props) {
                         <Link target="_blank" className="btn" href={`${live}`}>See it Live</Link>
                     )}
                 </div>
-                {/* @ts-expect-error Server Component */}
                 <TechCard project={project} />
                 <p>{description}</p>
-                {/* @ts-expect-error Server Component */}
                 <ContentCard project={project} />
                 <h4>Some screenshots:</h4>
             </div>      
             <div className="images-box">
-                {/* @ts-expect-error Server Component */}
                 <DisplayImages project={project} />
             </div>
         </>  

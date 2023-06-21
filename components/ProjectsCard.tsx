@@ -15,6 +15,7 @@ export default async function ProjectsCard({categority}: any) {
             const AllProjects = await prisma.projects.findMany({
                 where: { categority: categority, published: true },
                 orderBy: { createdAt: 'desc'},
+                include: { tech: true},
             });
             
             return (
@@ -44,7 +45,6 @@ export default async function ProjectsCard({categority}: any) {
                                         <Link target="_blank" className="btn" href={`${project.live}`}>See it Live</Link>
                                     )}
                                 </div>
-                                {/* @ts-expect-error Server Component */}
                                 <TechCard project={project} />
                           </li>
                       );

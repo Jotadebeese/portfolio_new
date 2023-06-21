@@ -1,19 +1,12 @@
-import {prisma} from "@/lib/prisma";
-  
   interface Techs {
     id: number;
     icon: string;
     name: string;
   }
 
-export default async function TechCard({ project }: any) {
-    const getproject = await prisma.projects
-    .findUnique({
-        where: { id: project.id},
-        include: { tech: true}, // Include the related tech data
-    });
+export default function TechCard({ project }: any) {
   
-    const techs: Techs[] = getproject?.tech || []; // Access 'tech' data from the project
+    const techs: Techs[] = project?.tech || []; // Access 'tech' data from the project
   
     return (
         <div className="techCard-container">
