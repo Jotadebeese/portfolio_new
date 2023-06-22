@@ -11,8 +11,11 @@ interface image {
     return (
         <div className="image-container">
             {images.map((image:image) => {
-            return <img  className="single-image" key={image.id} src={image.key} alt={`Project Image ${image.id + 1}`} width={300} />
-            })}
+            return (
+                <div className={image.id === 1 ? "single-image" : "single-image hidden"}>
+                    <img key={image.id} src={image.key} alt={`Project Image ${image.id + 1}`} />
+                </div>
+            )})}
         </div>
     );
   };
