@@ -5,6 +5,7 @@ export default function NotFound() {
     <div className='not-found'>
         <h1 className='box-404'>404</h1>
         <p><mark>This page does not exist</mark></p>
+        <br/>
         <Link  className='btn' href={'/'}>
             Go back...
         </Link>
