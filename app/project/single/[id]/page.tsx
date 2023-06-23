@@ -44,7 +44,6 @@ export default async function Project({ params }: Props) {
                 <TechCard project={project} />
                 <p>{description}</p>
                 <ContentCard project={project} />
-                <h4>Screenshots:</h4>
             </div>      
             <div className="images-box">
                 <DisplayImages project={project} />

@@ -10,6 +10,9 @@ interface image {
 
     return (
         <div className="image-container">
+            < div className="main-image">
+                <h3>Screen Shots from the project</h3>
+            </div>
             {images.map((image:image) => {
             return (
                 <div className={image.id === 1 ? "single-image" : "single-image hidden"}>
