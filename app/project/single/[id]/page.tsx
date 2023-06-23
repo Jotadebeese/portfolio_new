@@ -45,7 +45,7 @@ export default async function Project({ params }: Props) {
                 <p>{description}</p>
                 <ContentCard project={project} />
             </div>      
-            <div className="images-box">
+            <div className="images-box fade-in">
                 <DisplayImages project={project} />
             </div>
         </>  
