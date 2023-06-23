@@ -11,7 +11,8 @@ interface image {
     return (
         <div className="image-container">
             < div className="main-image">
-                <h3>Screen Shots from the project</h3>
+                <h3>Screenshots</h3>
+                <p>Some screenshots to help you have a better picture of the work.</p>
             </div>
             {images.map((image:image) => {
             return (
