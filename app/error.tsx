@@ -1,6 +1,7 @@
 'use client' // Error components must be Client Components
  
-import { useEffect } from 'react'
+import { useEffect } from 'react';
+import Link from 'next/link'
  
 export default function Error({
   error,
@@ -16,7 +17,7 @@ export default function Error({
  
   return (
     <div className='error-container fade-in'>
-      <h2><mark>Something went wrong!</mark></h2>
+      <h2><mark>Something went wrong...</mark></h2>
       <button
         onClick={
           // Attempt to recover by trying to re-render the segment
@@ -25,6 +26,10 @@ export default function Error({
       >
         Try again
       </button>
+      <br/>
+      <Link  className='btn' href={'/'}>
+            Or go back
+      </Link>
     </div>
   )
 }
