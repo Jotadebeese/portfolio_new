@@ -17,7 +17,7 @@ export default function Error({
  
   return (
     <div className='error-container fade-in'>
-      <h2><mark>Something went wrong...</mark></h2>
+      <h2><mark>Something wrong...</mark></h2>
       <br/>
       <button
         onClick={
