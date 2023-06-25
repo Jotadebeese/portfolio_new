@@ -2,6 +2,7 @@ import ContentCard from "@/components/ContentCard";
 import DisplayImages from "@/components/DisplayImages";
 import TechCard from "@/components/TechCard";
 import { prisma } from "@/lib/prisma";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote/rsc";
 import Link from "next/link";
 
 interface Props {
@@ -42,7 +43,9 @@ export default async function Project({ params }: Props) {
                     )}
                 </div>
                 <TechCard project={project} />
-                <p>{description}</p>
+                <MDXRemote
+                    source={description}
+                />
                 <ContentCard project={project} />
             </div>      
             <div className="images-box fade-in">
