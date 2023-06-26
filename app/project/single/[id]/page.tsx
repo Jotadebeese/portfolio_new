@@ -1,4 +1,3 @@
-import ContentCard from "@/components/ContentCard";
 import DisplayImages from "@/components/DisplayImages";
 import TechCard from "@/components/TechCard";
 import { prisma } from "@/lib/prisma";
@@ -16,10 +15,10 @@ export default async function Project({ params }: Props) {
     const project = await prisma.projects
     .findUnique({
         where: { id: parseInt(params.id)},
-        include: { images: true, content: true, tech: true}, // Include the related tech data
+        include: { images: true, tech: true}, // Include the related tech data
     });
 
-    const { title, description, github, live } = project ?? {};
+    const { title, description, github, live, content } = project ?? {};
 
     const createdat = project?.createdAt.toLocaleDateString("en-US", {
         year: "numeric",
@@ -43,10 +42,10 @@ export default async function Project({ params }: Props) {
                     )}
                 </div>
                 <TechCard project={project} />
+                {/* @ts-expect-error Server Component */}
                 <MDXRemote
-                    source={description}
+                    source={`${content}`}
                 />
-                <ContentCard project={project} />
             </div>      
             <div className="images-box fade-in">
                 <DisplayImages project={project} />
