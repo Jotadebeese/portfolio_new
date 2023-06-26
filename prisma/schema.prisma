@@ -13,13 +13,13 @@ model Projects {
   id          Int      @id @default(autoincrement())
   title       String   @db.VarChar(255)
   description String
+  content     String?
   categority  String
   createdAt   DateTime
   github      String?
   live        String?
   published   Boolean  @default(false)
   tech        Tech[]
-  content     Content[]
   images      Images[]
 }
 
@@ -28,17 +28,6 @@ model Tech {
   name       String   @unique
   icon       String
   projects   Projects[]
-}
-
-model Content {
-  id        Int @id @default(autoincrement())
-  point1    String?
-  point2    String?
-  point3    String?
-  point4    String?
-  point5    String?
-  point6    String?
-  projects  Projects[]
 }
 
 model Images {

@@ -17,6 +17,7 @@ export function AddNewForm() {
         const body = {
             title: formData.get('title'),
             description: formData.get('description'),
+            content: formData.get('content'),
             categority: formData.get('categority'),
             createdAt: formData.get('createdAt'),
             github: formData.get('github'),
@@ -54,6 +55,14 @@ export function AddNewForm() {
                         cols={30}
                         rows={30}
                         placeholder='Add description'
+                        required
+                    ></textarea>
+                    <label htmlFor="content">Content</label>
+                    <textarea
+                        name="content"
+                        cols={30}
+                        rows={30}
+                        placeholder='Add content in Markdown'
                         required
                     ></textarea>
                     <label htmlFor="github">GitHub Repository</label>

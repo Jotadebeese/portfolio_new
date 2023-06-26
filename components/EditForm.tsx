@@ -17,6 +17,7 @@ export function EditForm({ project }: any) {
             id: formData.get('id'),
             title: formData.get('title'),
             description: formData.get('description'),
+            content: formData.get('content'),
             categority: formData.get('categority'),
             createdAt: formData.get('createdAt'),
             published: formData.get('published'),
@@ -55,6 +56,13 @@ export function EditForm({ project }: any) {
                         cols={30}
                         rows={30}
                         defaultValue={project?.description ?? ''}
+                    ></textarea>
+                    <label htmlFor="content">Content</label>
+                    <textarea
+                        name="content"
+                        cols={30}
+                        rows={30}
+                        defaultValue={project?.content ?? ''}
                     ></textarea>
                     <label htmlFor="github">GitHub Repository</label>
                     <input type='text' name="github"  defaultValue={project?.github} />
