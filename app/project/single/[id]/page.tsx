@@ -23,7 +23,6 @@ export default async function Project({ params }: Props) {
     const createdat = project?.createdAt.toLocaleDateString("en-US", {
         year: "numeric",
         month: "long",
-        day: "numeric",
       });
     
     return (

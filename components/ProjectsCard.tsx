@@ -24,7 +24,6 @@ export default async function ProjectsCard({categority}: any) {
                         const createdAt = project.createdAt.toLocaleDateString("en-US", {
                             year: "numeric",
                             month: "long",
-                            day: "numeric",
                           });
 
                         return (
