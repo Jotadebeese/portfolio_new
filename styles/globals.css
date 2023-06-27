@@ -118,7 +118,7 @@ button[disabled]{
   width: 100%;
 }
 
-.project-container p, .project-container ul, .project-container ol {
+.project-container p, .project-container ul, .project-container ol, .project-container code {
   width: 100%;
 }
 
