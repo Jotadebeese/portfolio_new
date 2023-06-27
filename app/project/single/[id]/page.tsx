@@ -32,6 +32,7 @@ export default async function Project({ params }: Props) {
                     <h1>{title}</h1>
                     <small>{createdat}</small>
                 </div>
+                <br /><br /><br />
                 <div className="little-box">
                     {github && (
                         <Link target="_blank" className="btn" href={`${github}`}>GitHub</Link>
@@ -40,7 +41,9 @@ export default async function Project({ params }: Props) {
                         <Link target="_blank" className="btn" href={`${live}`}>See it Live</Link>
                     )}
                 </div>
+                <br />
                 <TechCard project={project} />
+                <br /><br /><br /><br />
                 {/* @ts-expect-error Server Component */}
                 <MDXRemote
                     source={`${content}`}

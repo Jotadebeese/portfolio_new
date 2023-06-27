@@ -112,7 +112,18 @@ button[disabled]{
   margin: auto;
   padding: 50px 20px 50px 20px;
   max-width: 800px;
-  gap: 40px;
+}
+
+.project-container img {
+  width: 100%;
+}
+
+.project-container p, .project-container ul, .project-container ol {
+  width: 100%;
+}
+
+.project-container li {
+  padding: 5px 0;
 }
 
 .item1 {
@@ -234,6 +245,19 @@ button[disabled]{
   margin: auto;
   padding: auto;
 }
+
+.img-description {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  background-color: rgba(71, 71, 71, 0.877);
+}
+
 /* Boxes & Containers */
 .error-container {
   display: flex;
