@@ -34,7 +34,7 @@ export default async function ProjectsCard({categority}: any) {
                                         <h3 className="project-title">{project.title}</h3>
                                     </Link>
                                     <p>
-                                        {project.description}&nbsp;&nbsp;&nbsp;
+                                        {project.description}&nbsp;
                                         <Link href={`/project/single/${project.id}`}>
                                             <span className="project-title">Learn more</span>
                                         </Link>

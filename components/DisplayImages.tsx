@@ -31,7 +31,7 @@ interface image {
                             setDisplayImage(image.key);
                             setImageDesc(image.description);
                             setDisplay(true);
-                            setArrayImage(image.id - 1);
+                            setArrayImage(images.indexOf(image));
                         }} className="image-button">
                             <img key={image.id} src={image.key} alt={`Project Image ${image.id + 1}`} />
                         </button>

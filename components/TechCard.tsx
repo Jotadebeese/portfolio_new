@@ -16,6 +16,7 @@ export default function TechCard({ project }: any) {
                         <img 
                             src={tech.icon}
                             width={40}
+                            height={40}
                             alt="Icon of technology"
                         />
                         <p>{tech.name}</p>
