@@ -112,14 +112,41 @@ button[disabled]{
   margin: auto;
   padding: 50px 20px 50px 20px;
   max-width: 800px;
+  overflow: hidden;
 }
 
 .project-container img {
   width: 100%;
 }
 
-.project-container p, .project-container ul, .project-container ol, .project-container code {
+.project-container p, .project-container ul, .project-container ol {
   width: 100%;
+}
+.project-container :not(pre) code {
+  font-size: 1rem;
+  background-color: var(--color-gray-2);
+  color: var(--color-text-dark);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.project-container pre {
+  width: 100%;
+}
+
+.project-container pre code {
+  display: block;
+  background: none;
+  white-space: pre;
+  font-size: 0.8rem;
+  background-color: var(--color-dark-gray-2);
+  color: var(--color-text-light);
+  padding: 10px;
+  
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  max-width: 100%;
+  min-width: 100px;
 }
 
 .project-container li {
