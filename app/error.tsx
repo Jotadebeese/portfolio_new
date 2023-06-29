@@ -17,7 +17,7 @@ export default function Error({
  
   return (
     <div className='error-container fade-in'>
-      <p className='something-wrong'>{error.toString()}</p>
+      <p className='something-wrong'>error</p>
       <p>Looks like something<br />didn't go as planned.<br />you can:</p>
       <button
         onClick={

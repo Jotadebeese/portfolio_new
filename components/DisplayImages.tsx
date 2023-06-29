@@ -17,7 +17,7 @@ interface image {
     const images: any = project?.images || []; // Access 'tech' data from the project
 
     return (
-        <>
+        <>{images.length !==0 && (
             <div className="image-container">
                 <div className="main-image">
                     <h2>{project?.title}</h2>
@@ -38,6 +38,7 @@ interface image {
                     </div>
                 )})}
             </div>
+        )}
             {display && (
                 <div className="display-box fade-in">
                     <button className='close-display' onClick={() => setDisplay(false)}>X</button>
