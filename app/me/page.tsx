@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import styles from '/styles/me.module.css'
+import MeComponent from "@/components/MeComponent";
 
 export const metadata: Metadata = {
     title: 'A full description of Juan',
@@ -7,6 +9,8 @@ export const metadata: Metadata = {
 
 export default function Me() {
     return (
-        <p>A full description about me</p>
+        <div className={styles.main}>
+            <MeComponent />
+        </div>
     )
 }
