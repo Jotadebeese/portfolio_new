@@ -22,13 +22,13 @@ export default function NavMenu() {
                 </div>
             <ul className={styles.links}>
                 <li>
-                    <Link href={'/me'}>Me</Link>
+                    <Link href={'/comingsoon'}>Me</Link>
                 </li>
                 <li>
                     <Link href={'/project/full_stack'}>Projects</Link>
                 </li>
                 <li>
-                    <Link href={'/users'}>Contact</Link>
+                    <Link href={'/comingsoon'}>Contact</Link>
                 </li>
             </ul>
         </nav>

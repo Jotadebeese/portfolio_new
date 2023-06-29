@@ -17,8 +17,8 @@ export default function Error({
  
   return (
     <div className='error-container fade-in'>
-      <h2><mark>Something wrong...</mark></h2>
-      <br/>
+      <p className='something-wrong'>{error.toString()}</p>
+      <p>Looks like something<br />didn't go as planned.<br />you can:</p>
       <button
         onClick={
           // Attempt to recover by trying to re-render the segment

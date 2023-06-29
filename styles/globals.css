@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 :root {
   --color-white: rgb(255, 255, 255);
   --color-gray: #e6d9d1;
@@ -287,47 +289,70 @@ button[disabled]{
 
 /* Boxes & Containers */
 .error-container {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 200px;
+  padding-top: 100px;
   width: 100%;
   height: 100vh;
-  background-color:#1A161A;
+  background-color:#28232a;
   background-image: url('/error.png');
   object-fit: contain;
   background-repeat: no-repeat;
   background-position: center;
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+}
+
+.something-wrong {
+  font-size: 2rem;
+  background-color: var(--color-text-dark);
+  padding: 20px 50px;
+  color: var(--color-gray);
+  border-radius: 20px;
+  margin: 10px;
 }
 
 .box-404 {
-  font-size: 4rem;
-  background-color: rgba(53, 53, 53, 0.86);
+  font-size: 8rem;
+  background-color: var(--color-text-dark);
   padding: 20px 50px;
-  color: var(--color-text-light);
+  color: var(--color-gray);
   border-radius: 20px;
 }
 .not-found {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 200px;
+  padding-top: 100px;
   width: 100%;
-  height: 100vh;
-  background-color:#28232a;
+  height: 100%;
+  overflow: hidden;
+  background-color:#1A161A;
   background-image: url('/404-notfound.png');
   object-fit: contain;
   background-repeat: no-repeat;
   background-position: center;
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  color: var(--color-gray);
 }
 
-.error-container mark, .not-found mark {
-  background-color: rgba(53, 53, 53, 0.86);
+.not-found p, .error-container p {
+  background-color: var(--color-text-dark);
   padding: 20px 50px;
   color: var(--color-gray);
   border-radius: 20px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .little-box {
