@@ -21,9 +21,6 @@ export default function NavMenu() {
                 <li>
                     <Link href={'/project/full_stack'}>My Work</Link>
                 </li>
-                <li>
-                    <Link href={'/comingsoon'}>Contact</Link>
-                </li>
             </ul>
         </nav>
     )

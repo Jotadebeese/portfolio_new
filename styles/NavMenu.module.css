@@ -2,7 +2,7 @@
     display: flex;
     background-color: var(--color-white);
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     font-size: 0.8rem;
     color: var(--color-text-dark);
 }
@@ -19,7 +19,7 @@
     gap: 10px;
     font-family: 'VT323', monospace;
     font-size: 20px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .pagina button {
