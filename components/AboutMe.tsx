@@ -10,15 +10,27 @@ export default function AboutMe() {
             <br/>
             <Link className="btn" href={'/project/full_stack'}>Check my work</Link>
             <br />
-            <p>Juan Bedoya</p>
             <ul className={styles.socialContainer}>
+                <p>Get in touch</p>
                 <li className={styles.socialItem}>
-                    <img src="/twitter.png" width={20} />
-                    <Link href={'/'}><i>@jotadebeese</i></Link>
+                    <img src="/email.png" width={25} />
+                    <Link href={'mailto:jotadebeese@gmail.com'} target="_blank"><i>jotadebeese@gmail.com</i></Link>
                 </li>
                 <li className={styles.socialItem}>
-                <img src="/email.png" width={20} />
-                    <Link href={'/'}><i>juan@jotadebeese.me</i></Link>
+                    <img src="/github.png" width={25} />
+                    <Link href={'https://github.com/Jotadebeese'} target="_blank"><i>jotadebeese</i></Link>
+                </li>
+                <li className={styles.socialItem}>
+                    <img src="/instagram.png" width={25} />
+                    <Link href={'https://www.instagram.com/jotadebeese/'} target="_blank"><i>jotadebeese</i></Link>
+                </li>
+                <li className={styles.socialItem}>
+                    <img src="/twitter.png" width={25} />
+                    <Link href={'https://twitter.com/Jotadebeese'} target="_blank"><i>jotadebeese</i></Link>
+                </li>
+                <li className={styles.socialItem}>
+                    <img src="/linkedin.png" width={25} />
+                    <Link href={'https://www.linkedin.com/in/jotadebeese/'} target="_blank"><i>jotadebeese</i></Link>
                 </li>
             </ul>
         </div>
