@@ -284,7 +284,7 @@ button[disabled]{
   text-align: center;
   font-size: 0.8rem;
   color: var(--color-text-light);
-  background-color: rgba(71, 71, 71, 0.877);
+  background-color: rgba(22, 22, 22, 0.877);
 }
 
 /* Boxes & Containers */

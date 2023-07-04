@@ -8,7 +8,7 @@ export default function AboutMe() {
             <p>A Software Developer, with background in electronics engineering and a big passion in AI.</p>
             <small><i>Coffee lover.</i></small>
             <br/>
-            <Link className="btn" href={'/project/full_stack'}>Check my work</Link>
+            <Link className="btn" href={'/project/full_stack'}>My work</Link>
             <br />
             <ul className={styles.socialContainer}>
                 <p>Get in touch</p>
