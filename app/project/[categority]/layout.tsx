@@ -11,7 +11,7 @@ export default function ProjectCategoryLayaout({
     const category = params.categority;
     return (
         <div className="projects-container">
-            <p>Divided in three categories:</p>
+            <p>Choose one:</p>
             <div className="little-box">
                 <Link href={'/project/machine'} className={category === 'machine'? 'btn select' : 'btn'} >Machine Learning</Link>
                 <Link href={'/project/full_stack'} className={category === 'full_stack'? 'btn select' : 'btn'} >Full Stack</Link>
