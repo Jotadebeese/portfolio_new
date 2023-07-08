@@ -20,14 +20,14 @@ export default function Error({
     <div className='error-container fade-in'>
       <p className='something-wrong'>error</p>
       <p>Looks like something<br />didn't go as planned.<br />you can:</p>
-      <button
+{/*       <button
         onClick={
           // Attempt to recover by trying to re-render the segment
           () => router.refresh()
         }
       >
         Try again
-      </button>
+      </button> */}
       <br/>
       <Link  className='btn' href={'/'}>
             Or go back
