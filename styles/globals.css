@@ -420,6 +420,8 @@ button[disabled]{
 
 .little-link a {
   color: var(--color-text-dark);
+  text-decoration: none;
+  border-bottom: 1px dashed black;
 }
 
 /* Tech cards */
