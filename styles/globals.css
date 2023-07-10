@@ -418,6 +418,10 @@ button[disabled]{
   padding: 0 30px;
 }
 
+.little-link a {
+  color: var(--color-text-dark);
+}
+
 /* Tech cards */
 
 .techCard-container {

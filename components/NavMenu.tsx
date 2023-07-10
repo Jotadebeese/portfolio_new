@@ -14,10 +14,10 @@ export default function NavMenu() {
             <ul className={styles.links}>
                 {/* <li>
                     <Link href={'/comingsoon'}>Blog</Link>
-                </li>
-                <li>
-                    <Link href={'/comingsoon'}>Me</Link>
                 </li> */}
+                <li>
+                    <Link href={'/me'}>Me</Link>
+                </li>
                 <li>
                     <Link href={'/project/full_stack'}>My Work</Link>
                 </li>

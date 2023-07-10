@@ -6,7 +6,9 @@ export default function AboutMe() {
         <div className="aboutme">
             <h1>Hi, I'm Juan</h1>
             <p>A Software Developer, with background in electronics engineering and a big passion in AI.</p>
-            <small><i>Get in touch.</i></small>
+            <small>I'll be posting my projects and learnings here, as well as anything else I find interesting.</small>
+            <br />
+            <small className="little-link"><Link href={'/me'}>Meet me</Link> or get in touch:</small>
             <div className={styles.socialContainer}>
                 <Link href={'mailto:jotadebeese@gmail.com'} target="_blank"><img src="/email.png" width={25} /></Link>
                 <Link href={'https://github.com/Jotadebeese'} target="_blank"><img src="/github.png" width={25} /></Link>
