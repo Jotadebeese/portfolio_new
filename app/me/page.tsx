@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import styles from '/styles/me.module.css'
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
     title: 'A full description of Juan',
@@ -13,7 +14,7 @@ export default function Me() {
             <h1>About Me</h1>
             <hr />
             <div className={styles.imgContainer}>
-                <img src="bowser.jpeg" alt="Bowser eating my hand" />
+                <Image src="/bowser.jpeg" alt="Bowser eating my hand" width={800} height={486} />
                 <small><i>Bowser eating my hand</i></small>
             </div>
             <p>Hi there, my name is Juan. I like to code, mainly in web development, doing the full-stack, and I am passionate about AI and its development &#40;I have some ideas to work on and train some models&#41;.</p>
