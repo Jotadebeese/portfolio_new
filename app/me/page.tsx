@@ -23,6 +23,13 @@ export default function Me() {
             <p>Outside of programming, I collect LEGO pieces &#40;I already have a decent collection&#41; and work as a barista part-time to help me financially. Once per week, I also operate the roasting process of the coffee I use.</p>
             <p>Lastly, I created this site to document my learning and knowledge and share any project I work on. Also, don&#39;t hesitate to contact me if you find errors or want to chat.</p>
             <br /><br />
+            <div className={styles.bmc}>
+                <p><i>You can also buy me a coffee ;&#41;</i></p>
+                <Link href={"https://www.buymeacoffee.com/jotadebeese"} target="_blank">
+                    <Image src={'/giphy.webp'} alt="Buy me a coffee gif" width={100} height={100} />
+                </Link>
+            </div>
+            <br /><br />
             <hr />
             <div className={styles.socialContainer}>
                 <Link href={'mailto:jotadebeese@gmail.com'} target="_blank"><img src="/email.png" width={25} /></Link>

@@ -10,11 +10,7 @@ export default function ProjectsList(categority: any) {
     return (
         <>
             {/* @ts-expect-error Server Component */}
-            <Suspense fallback={<LoadingUsers />}>
-                {/* @ts-expect-error Server Component */}
-                <ProjectsCard categority={categority.params.categority} />
-            </Suspense>
-            
+            <ProjectsCard categority={categority.params.categority} />            
         </>
     );
 }
