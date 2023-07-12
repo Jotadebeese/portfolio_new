@@ -13,7 +13,7 @@ interface project {
 export default async function ProjectsCard({categority}: any) {
 
             const AllProjects = await prisma.projects.findMany({
-                where: { categority: categority.params.categority, published: true },
+                where: { categority: categority, published: true },
                 orderBy: { createdAt: 'desc'},
                 include: { tech: true},
             });
