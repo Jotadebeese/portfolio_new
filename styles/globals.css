@@ -414,6 +414,7 @@ button[disabled]{
   justify-content: space-evenly;
   max-width: 800px;
   margin: 100px auto;
+  margin-bottom: 50px;
   font-size: 1.5rem;
   padding: 0 30px;
 }

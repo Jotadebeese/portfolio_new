@@ -19,7 +19,20 @@ export default function AboutMe() {
             </div>
             <br/>
             <Link className="btn" href={'/project/full_stack'}>My work</Link>
-            <br />
+            <form className={styles.form}>
+                <h3>Send me a message if you feel like:</h3>
+                <label htmlFor="name">Make it anonymous if you want.</label>
+                <input type="text" name="name" placeholder='A name or nickname.' required />
+                <label htmlFor="email">An email if you want me to contact you back.</label>
+                <input type="text" name="email" placeholder='Any email will do it, not required.' />
+                <label htmlFor="message">The message.</label>
+                <textarea
+                    name="message"
+                    placeholder='Could be even a joke.'
+                    required
+                ></textarea>
+                <button type="submit">Sent</button>
+            </form>
         </div>
     )
 }
