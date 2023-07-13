@@ -26,7 +26,7 @@ export default function Me() {
             <div className={styles.bmc}>
                 <p><i>You can also buy me a coffee ;&#41;</i></p>
                 <Link href={"https://www.buymeacoffee.com/jotadebeese"} target="_blank">
-                    <Image src={'/giphy.webp'} alt="Buy me a coffee gif" width={100} height={100} />
+                    <Image src={'/giphy.webp'} alt="Buy me a coffee gif" width={50} height={50} />
                 </Link>
             </div>
             <br /><br />
