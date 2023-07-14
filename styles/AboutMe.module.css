@@ -22,7 +22,7 @@
     justify-content: center;
     font-size: 0.9rem;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 50px;
     gap: 20px;
 }
 
@@ -32,6 +32,7 @@
     font-size: inherit;
     font-family: inherit;
     width: 80%;
+    border-radius: 10px;
 }
 
 .form input:focus {
@@ -47,9 +48,35 @@
     font-family: inherit;
     width: 80%;
     height: 100px;
+    border-radius: 10px;
 }
 
 .form textarea:focus {
     border: 1px dashed var(--color-red);
     outline: none;
+}
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.thanks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    align-self: center;
+    padding: 50px;
+    gap: 20px;
+    margin-top: 50px;
+    border: 1px dashed var(--color-text-dark);
+}
+
+.thanks p {
+    font-size: 1.5rem;
 }

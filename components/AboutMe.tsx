@@ -1,10 +1,15 @@
 'use client'
 import Link from "next/link";
 import styles from '/styles/AboutMe.module.css'
+import { useState } from "react";
 
 export default function AboutMe() {
 
+    const [submitted, setSubmitted] = useState(true);
+    const [isSending, setIsSending] = useState(false);
+
     const sendMessage = async(e:React.FormEvent<HTMLFormElement>) => {
+        setIsSending(true);
         e.preventDefault();
 
         const Data = new FormData(e.currentTarget);
@@ -14,7 +19,8 @@ export default function AboutMe() {
             body: Data,
         })
         .then(() => {
-            alert('Thank you');
+            setIsSending(false);
+            setSubmitted(true);
         });
     };
 
@@ -36,18 +42,29 @@ export default function AboutMe() {
             <br/>
             <Link className="btn" href={'/project/full_stack'}>My work</Link>
             <form onSubmit={sendMessage} className={styles.form} >
+                {isSending? 
+                <div className={styles.loader}>
+                    <img src="/temp.gif" />
+                    <div className="loader"></div>
+                    <p>Sending message  .  .  .</p>
+                </div> :
+                submitted? 
+                <div className={styles.thanks}>
+                    <p>Thank you!</p>
+                    <button onClick={() => setSubmitted(false)}>Feel like sending one more?</button>
+                </div>: <>
                 <h3>Send me a message if you feel like:</h3>
                 <label htmlFor="name">Make it anonymous if you want.</label>
                 <input type="text" name="name" placeholder='A name or nickname.' required />
                 <label htmlFor="email">An email to contact you back.</label>
-                <input type="text" name="email" placeholder='Any email will do it, not required.' />
+                <input type="email" name="email" placeholder='Any email will do it, not required.' />
                 <label htmlFor="message">The message.</label>
                 <textarea
                     name="message"
                     placeholder='Could be a joke.'
                     required
                 ></textarea>
-                <button type="submit">Sent</button>
+                <button type="submit">Sent</button></>}
             </form>
         </div>
     )
