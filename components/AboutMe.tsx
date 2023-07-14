@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function AboutMe() {
 
-    const [submitted, setSubmitted] = useState(true);
+    const [submitted, setSubmitted] = useState(false);
     const [isSending, setIsSending] = useState(false);
 
     const sendMessage = async(e:React.FormEvent<HTMLFormElement>) => {
