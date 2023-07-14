@@ -1,7 +1,23 @@
+'use client'
 import Link from "next/link";
 import styles from '/styles/AboutMe.module.css'
 
 export default function AboutMe() {
+
+    const sendMessage = async(e:React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        const Data = new FormData(e.currentTarget);
+
+        const res = await fetch('https://script.google.com/macros/s/AKfycby9x4360BZ1p7upzTYxMbzCCDCvUr_zzsENst304_tlPuN1RJC1MVegDfGxUHA7DUdPeQ/exec', {
+            method: 'POST',
+            body: Data,
+        })
+        .then(() => {
+            alert('Thank you');
+        });
+    };
+
     return (
         <div className="aboutme">
             <h1>Hi, I'm Juan</h1>
@@ -19,7 +35,7 @@ export default function AboutMe() {
             </div>
             <br/>
             <Link className="btn" href={'/project/full_stack'}>My work</Link>
-            <form className={styles.form}>
+            <form onSubmit={sendMessage} className={styles.form} >
                 <h3>Send me a message if you feel like:</h3>
                 <label htmlFor="name">Make it anonymous if you want.</label>
                 <input type="text" name="name" placeholder='A name or nickname.' required />
