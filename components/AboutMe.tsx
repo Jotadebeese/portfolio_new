@@ -40,7 +40,7 @@ export default function AboutMe() {
                 <Link href={'https://www.linkedin.com/in/jotadebeese/'} target="_blank"><img src="/linkedin.png" width={25} /></Link>
             </div>
             <br/>
-            <Link className="btn" href={'/project/full_stack'}>My work</Link>
+            <Link className="little-link" href={'/project/full_stack'}>Check my work</Link>
             <form onSubmit={sendMessage} className={styles.form} >
                 {isSending? 
                 <div className={styles.loader}>
