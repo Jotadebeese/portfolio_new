@@ -68,7 +68,8 @@
 .thanks {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     width: fit-content;
     align-self: center;
     padding: 50px;
