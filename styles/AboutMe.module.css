@@ -74,7 +74,6 @@
     align-self: center;
     padding: 50px;
     gap: 20px;
-    margin-top: 50px;
     border: 1px dashed var(--color-text-dark);
 }
 
